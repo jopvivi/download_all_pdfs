@@ -17,7 +17,6 @@ for pdf in PDFList:
     print(pdf)
 print('There are ' + str(len(PDFList)) + ' PDFs in the file.')
 
-
 from contextlib import redirect_stdout # Redirects the output to a file
 
 with open('out.txt', 'w') as f:
