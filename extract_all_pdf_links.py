@@ -15,9 +15,9 @@ for target in file_name_list:
         urls = re.findall(r'(https?://\S+)', squash) # digs through the squashed mess, finds all 'https' links
         for i in urls: # iterates through the links
             if "pdf" in i: # tests if the link contains the string 'pdf'
-                if i.endswith('.') == True: # cleans the results a bit
+                if i.endswith('.'): # cleans the results a bit
                     i = (i[:-1])
-                if i.endswith(';') == True: # cleans the results a bit
+                if i.endswith(';'): # cleans the results a bit
                     i = (i[:-1])
                 pdf_list.append(i)
 
