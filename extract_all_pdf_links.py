@@ -9,7 +9,7 @@ if '*' in file_pattern:
     file_name_list.extend(glob.glob(file_pattern))
 
 for target in file_name_list:
-    with open(target, 'r', encoding='UTF-8') as file:
+    with open(target, 'r', encoding='ISO-8859-1') as file:
         file_list = file.readlines() # reads the file, line by line into a list
         squash = ' '.join(file_list).replace('\n','') # squashes everything together, removing spaces and returns
         urls = re.findall(r'(https?://\S+)', squash) # digs through the squashed mess, finds all 'https' links
